@@ -382,13 +382,12 @@ section.formcontato .formcontato__text {
   align-items: flex-start;
   flex-wrap: wrap;
   width: 35%;
+  margin: 0 6rem;
 }
 section.formcontato .formcontato__botao {
   display: flex;
   flex-direction: column;
-}
-section.formcontato .tenor-gif-embed {
-  margin: 2rem;
+  margin-bottom: 2rem;
 }
 section.formcontato .sub__titulo {
   font-size: 3rem;
@@ -400,7 +399,7 @@ section.formcontato .formcontato__subtext {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1;
-  margin: 0 0 1rem 0;
+  margin: 0 0 2rem 0;
 }
 section.formcontato .formcontato__form {
   display: flex;
@@ -408,10 +407,43 @@ section.formcontato .formcontato__form {
   width: 100%;
   gap: 1.1rem;
 }
-section.formcontato .formcontato__input {
+section.formcontato div.formcontato__input {
+  position: relative;
   height: 2rem;
   border: none 0;
+  margin-bottom: 24px;
   padding: 0.5rem;
+  width: 100%;
+}
+section.formcontato input,
+section.formcontato button {
+  /* reset appeareance */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  /* box */
+  width: 100%;
+  padding: 16px 0;
+  border: none;
+  border-bottom: 2px solid #5E86E2;
+  background-color: transparent;
+  outline: none;
+  /* text */
+  color: #AAAAAA;
+  font-size: 1em;
+}
+section.formcontato input ~ label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  color: #5E86E2;
+  transition: 0.4s;
+}
+section.formcontato input:focus ~ label,
+section.formcontato input:valid ~ label {
+  transform: translateY(-24px);
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
 }
 section.formcontato .formcontato__textarea {
   box-shadow: none;
@@ -432,18 +464,6 @@ section.formcontato .formcontato__botao {
   cursor: pointer;
   transition: all 300ms ease-in-out;
   width: 35%;
-}
-section.formcontato input[type=email]:not(:-moz-placeholder-shown):invalid {
-  color: red;
-  border-bottom: solid 3px red;
-}
-section.formcontato input[type=email]:not(:-ms-input-placeholder):invalid {
-  color: red;
-  border-bottom: solid 3px red;
-}
-section.formcontato input[type=email]:not(:placeholder-shown):invalid {
-  color: red;
-  border-bottom: solid 3px red;
 }
 
 /*footeer*/
