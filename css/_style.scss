@@ -1,0 +1,629 @@
+
+    $azul-escuro: #293A67;
+    $cor-de-link: #9FB9F3;
+    $azul-claro: #D2DEF6;
+    $cinza-escuro: #4B4B4B;
+    $cinza-claro: #AAAAAA;
+    $royal1: #5E86E2;
+
+    @mixin fonte-padrao {
+    font-family: 'Roboto', sans-serif;
+
+
+    #title__bio {
+        color: $azul-claro;
+        padding: 0 auto;
+        font-size: 3.28rem;
+        font-weight: 800;
+
+    }
+
+    .title__subsection {
+        color: $azul-claro;
+        line-height: 1.5;
+        font-size: 1.8rem;
+        font-weight: 100;
+        text-align: start;
+    }
+
+    .about__title {
+        color: $cinza-escuro;
+        font-weight: 800;
+        font-size: 2rem;
+
+
+    }
+
+    .sub__titulo--skills {
+        color: $azul-claro;
+        font-weight: 800;
+        font-size: 2rem;
+    }
+
+    .sub__titulo--formacao {
+        color: $cinza-escuro;
+        font-weight: 800;
+        font-size: 2rem;
+
+    }
+    
+    .sub__titulo--xp {
+        color: $azul-claro;
+        font-weight: 800;
+        font-size: 2rem;
+
+    }
+    
+
+    a {
+        text-decoration: none;
+        color: $cor-de-link;        
+
+    }
+
+    // p {
+    //     font-size: 1rem;
+    //     color: $azul-claro;
+    // }
+}
+ body {
+    @include fonte-padrao();
+    background-color: $azul-escuro;
+     margin: 0;
+     transition: all 300ms ease-in-out;
+
+ }
+ ol, ul,li {
+     list-style: none;
+ }
+ 
+ /*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
+ de utiliza-la. 
+ 
+ Mas o que é o BEM?
+ 
+ BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
+ web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
+ Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
+ de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
+ 
+ Link da documentação oficial!
+ https://en.bem.info/methodology/quick-start/*/
+ 
+ /*Sessão Menu*/
+
+
+ section.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $cinza-escuro;
+    height: 8rem;
+
+
+    nav {
+        display: flex;
+        align-items: center;
+        margin: 0 8rem;
+        transition: all 300ms ease-in-out;  
+        
+    }
+    img {
+        height: 40px;
+        align-self: center;
+        margin-left: 8rem;
+    }
+
+    .menu__list {
+        display: flex;
+
+
+        li {
+            margin-right: 4rem;
+            padding: 10px;
+            transition: all 300ms ease-in-out;
+            
+
+        }
+    }
+
+
+     li:hover {
+        background-color: $azul-claro;
+        padding: 10px;
+        border-style: none;
+        box-shadow:0px 0px 0px 0px inset;
+
+    }
+
+    .menu__list__item__contato {
+        left: 0;
+        padding: 10px;
+        margin-right: 8rem;
+        transition: all 300ms ease-in-out;
+    }
+
+ }
+
+
+ 
+ /*Sessão Title*/
+ 
+ section.title {
+    background-color: #4B4B4B;
+
+    .title__div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 8rem 0 8rem;
+
+
+    }
+
+    .container p span.typed-text {
+        color: $royal1;
+        padding: 0 auto;
+        font-size: 3.28rem;
+        font-weight: 800;
+        
+      }
+      .container p span.cursor {
+        
+        display: inline-block;
+        background-color: $royal1;
+        margin-left: 0.1rem;
+        animation: blink 1s infinite;
+      }
+      .container p span.cursor.typing {
+        
+        animation: none;
+      }
+      @keyframes blink {
+        0%  { background-color: $azul-claro; }
+        49% { background-color: $azul-claro; }
+        50% { background-color: transparent; }
+        99% { background-color: transparent; }
+        100%  { background-color:$azul-claro; }
+      }
+
+    color: $azul-claro;
+    padding: 0 auto;
+    font-size: 3.28rem;
+    font-weight: 800;
+      
+
+    .profile__img img {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    ul {
+        font-size: 1.3rem;
+        padding-left: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 90%;
+        
+    }
+ }
+
+ 
+ /*Sessão About*/
+ 
+ section.about{
+    background-color: $azul-claro;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+
+    .about__container {
+        flex-direction: column;
+        display: flex;
+        justify-content: flex-start;
+        margin: 2rem 8rem 2rem 8rem;
+        width: 50%;
+
+
+    }
+
+    .about__title {
+        justify-content: center;
+        margin: 0;
+
+    }
+
+    .about__paragraph {
+        align-items: flex-end;
+        color: $cinza-escuro;
+        flex-direction: column;
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    .innovation img {
+        display: flex;
+        justify-content: flex-end;
+        width: 75%;
+        padding: 0;
+        margin-right: 8rem;
+    }
+
+ }
+
+
+/* skills*/
+
+section.skills {
+    display: flex;
+    flex-direction: column;
+    background-color: $cinza-escuro;
+    margin: 0;
+
+    
+    
+
+    .sub__titulo--skills {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 2rem 8rem 2rem 8rem;
+
+    }
+
+    .skills__line {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 8rem 0 8rem;
+    }
+
+    .skills__box {
+        background-color: $cinza-claro;
+        display: flex;
+        width: 160px;
+        height: 160px;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-items: center;
+        text-align: center;
+        margin: 2rem 2rem 2rem 0;
+
+    }
+
+    .skills__name ul {
+        display: flex;
+        align-content: flex-end;
+        text-align: center;
+    }
+
+    img {
+        width: 20%;
+    }
+
+}
+ /* Experiência Acadêmica*/
+ 
+ section.academic{
+    display: flex;
+    flex-direction: column;
+    background-color: $azul-claro;
+    margin: 0;
+    
+    .sub__titulo--formacao {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 2rem 8rem 2rem 8rem;
+
+    }
+
+    .academic__courses {
+        justify-content: center;
+
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 8rem 0 8rem;
+
+    }
+
+    .academic__courses__box {
+
+        display: flex;
+
+        justify-items: flex-start;
+        margin: 2rem 5.2rem 2rem 0;
+
+    }
+
+    .academic__courses__desc {
+        align-items: flex-end;
+        color: $cinza-escuro;
+
+    }
+
+
+
+    .academic__courses__list {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        
+        .academic__courses__item__img {
+            display: flex;
+            justify-content: center;
+            background-color: $cinza-escuro;
+            width: 220px;
+            height: 150px;
+    
+        }
+        
+        p {
+            margin: 0;
+        }
+    }
+ }
+ 
+ 
+ /* experiência*/
+ 
+ section.experience{
+    margin: 2rem 8rem;
+
+    .sub__titulo--xp {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 2rem 8rem 2rem 8rem;
+    }
+
+    .experiencie__box {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 300px;
+        flex-wrap: wrap;
+        margin: 2rem 8rem 2rem 8rem;
+        justify-content: space-around;
+
+    }
+
+    .experience__img {
+        display: flex;
+        flex-direction: column;
+        background-color: #f76d6d;
+        height: 300px;
+        width: 600px;
+
+    }
+
+    .experience__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 35%;
+        
+
+    }
+
+    .experience__title {
+        font-weight: 1000;
+        font-size: 1.8rem;
+        color: $royal1;
+        margin: 0;
+    }
+
+    .experience__text {
+        font-weight: 400;
+        color: $azul-claro;
+        line-height: 1.5;
+    }
+
+    .experiencia__botao--repo {
+        color: $royal1;
+        background: none;
+        border-style: none;
+        box-sizing: border-box;
+        box-shadow:0px 0px 0px 1px $royal1 inset;
+        padding: 1rem;
+        margin-right: 1rem;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+    }
+
+    .experiencia__botao--demo {
+        color: $azul-claro;
+        background-color: $royal1;
+        border-style: none;
+        padding: 1rem;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+    }
+
+    .experiencia__botao--demo:hover {
+        color: $cinza-escuro;
+        background-color: $azul-claro;
+    }
+
+    .experiencia__botao--repo:hover {
+        box-shadow:0px 0px 0px 0px inset;
+        background-color: $azul-claro;
+        color: $cinza-escuro;
+        border-style: none;
+
+    }
+ 
+ }
+
+
+// teste btn hidden
+//  section.container {
+
+//  #btn-vermais {
+//     font-size: 1.5rem;;
+//     border-style: none;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     background: none;
+//     color: $royal1;
+//     cursor: pointer;
+
+//     }
+ 
+ /*Contato*/
+ 
+ section.formcontato {
+    display: flex;
+    justify-content: center;
+    background-color: $azul-claro;
+    margin: 0;
+
+
+
+    .formcontato__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 35%;
+        
+    }
+
+    .formcontato__botao {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tenor-gif-embed {
+        margin: 2rem;
+    }
+
+    .sub__titulo {
+        font-size: 3rem;
+        color: $royal1;
+        margin-bottom: 1rem;
+    }
+
+    .formcontato__subtext {
+        color: $cinza-escuro;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        margin: 0 0 1rem 0;
+    }
+
+    .formcontato__form {
+         
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1.1rem;
+    }
+
+    .formcontato__input {
+        height: 2rem;
+        border: none 0;
+        padding: 0.5rem;
+    }
+
+    .formcontato__textarea {
+        box-shadow: none;
+        border: none 0;
+        padding: 0.5rem;
+    }
+
+    textarea:focus, input:focus {
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
+
+
+    .formcontato__botao {
+        display: flex;
+        align-items: center;
+        color: $azul-claro;
+        background-color: $royal1;
+        border-style: none;
+        padding: 1rem;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+        width: 35%;
+    }
+
+    input[type=email]:not(:placeholder-shown):invalid {
+
+        color: red;
+        border-bottom: solid 3px red;
+      }
+
+}
+ /*footeer*/
+ 
+ section.footer{
+
+    .footer__rodape {
+        text-align: center;
+        color: $cinza-claro;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $cinza-escuro;
+        line-height: 2rem;
+    }
+
+    p {
+        margin: 1rem 0 1rem;
+    }
+ }
+ 
+ /* Chegou a hora de se desafiar com a responsividade, 
+ utilize como referência os breakpoints @media abaixo*/
+ 
+ /*Tablet*/
+ @media (min-width: 768px) {
+ 
+ /* Menu */
+ 
+ /*title*/
+ 
+ /*Skills*/
+ 
+ /*Hobbies*/
+ 
+ /*Experiências acadêmicas*/
+ 
+ /*Expeirência profissional*/
+ 
+ }
+ 
+ /*Mobile*/
+ @media (min-width: 425px) {
+ }
+ 
+ /*Menu*/
+ 
+ /*Titulo*/
+ 
+ /*Sessão sobre*/
+ 
+ /*Skills*/
+ 
+ /*Hobbies*/
+  
+ /*Formação Acadêmica*/
+ 
+ /*Experiência Profissional*/
+ 
+  /*Contato*/
+ 
+ /*Footer*/
+ 
