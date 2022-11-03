@@ -237,20 +237,20 @@
                     <h3 class="formcontato__subtext">Quer entrar em contato comigo?</h3>
                     <h3 class="formcontato__subtext">Preencha o formulário ao lado e entrarei em contato o mais rápido possível. </h3>
                     <form class="formcontato__form">
-                        <div class="formcontato__input"><input required type="text" id="nome">
+                        <div class="formcontato__input"><input required type="text" id="nome" maxlength="50">
                         <label>Nome</label>
-                        <span class="input-error"></span>
+                        <span class="error"></span>
                         </div>
                         <div class="formcontato__input"><input required type="email" id="email">
                             <label>Email</label>
-                            <span class="input-error"></span>
+                            <span class="error"></span>
                             </div>
-                            <div class="formcontato__input"><input required type="text" id="assunto">
+                            <div class="formcontato__input"><input required type="text" id="assunto" maxlength="50">
                                 <label>Assunto</label>
-                                <span class="input-error"></span>
+                                <span class="error"></span>
                                 </div>
-                        <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
-                        <button class="formcontato__botao">Enviar mensagem</button>
+                        <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" maxlength="350" name="mensagem" placeholder="Digite sua mensagem"></textarea>
+                        <button type="submit" id="mySubmit" class="formcontato__botao" disabled="disabled">Enviar</button>
                     </form>
                 </div>
         </section>
@@ -308,8 +308,11 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 <!-- Script de smoothing scroll -->
-<script src="scroll.js"></script>
-  
+<script src="./scroll.js"></script>
+
+<!-- Validate form -->
+<script src="./validate.js"></script>
+
 </body>
 </html>
 

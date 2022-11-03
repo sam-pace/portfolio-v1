@@ -384,11 +384,6 @@ section.formcontato .formcontato__text {
   width: 35%;
   margin: 0 6rem;
 }
-section.formcontato .formcontato__botao {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2rem;
-}
 section.formcontato .sub__titulo {
   font-size: 3rem;
   color: #5E86E2;
@@ -421,40 +416,77 @@ section.formcontato button {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  /* box */
   width: 100%;
-  padding: 16px 0;
+  padding: 10px 0;
   border: none;
   border-bottom: 2px solid #5E86E2;
   background-color: transparent;
   outline: none;
-  /* text */
-  color: #AAAAAA;
+  color: #293A67;
   font-size: 1em;
 }
 section.formcontato input ~ label {
   position: absolute;
-  top: 16px;
+  bottom: 40px;
   left: 0;
   color: #5E86E2;
   transition: 0.4s;
 }
+section.formcontato input:-webkit-autofill,
+section.formcontato input:-webkit-autofill:hover,
+section.formcontato input:-webkit-autofill:focus,
+section.formcontato input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
 section.formcontato input:focus ~ label,
-section.formcontato input:valid ~ label {
-  transform: translateY(-24px);
-  font-size: 0.8em;
+section.formcontato input:valid ~ label,
+section.formcontato input:focus-within ~ label {
+  background-color: transparent;
+  font-weight: 500;
+  transform: none;
+  font-size: 1rem;
   letter-spacing: 0.1em;
+}
+section.formcontato span.error {
+  display: flex;
+}
+section.formcontato span.error.active {
+  margin-top: 0.5rem;
+  color: #AAAAAA;
+  font-size: 0.8rem;
 }
 section.formcontato .formcontato__textarea {
   box-shadow: none;
   border: none 0;
-  padding: 0.5rem;
+  line-height: 1.5em;
+  padding: 1rem;
+  width: 100%;
+  resize: none;
+  font-family: "Lato";
 }
 section.formcontato textarea:focus, section.formcontato input:focus {
   box-shadow: 0 0 0 0;
   outline: 0;
 }
 section.formcontato .formcontato__botao {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  color: #D2DEF6;
+  background-color: #AAAAAA;
+  border-style: none;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  width: 35%;
+}
+section.formcontato .formcontato__botao:valid {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   color: #D2DEF6;
@@ -464,6 +496,10 @@ section.formcontato .formcontato__botao {
   cursor: pointer;
   transition: all 300ms ease-in-out;
   width: 35%;
+}
+section.formcontato .formcontato__botao:disabled {
+  background-color: #AAAAAA;
+  cursor: default;
 }
 
 /*footeer*/
