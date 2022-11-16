@@ -101,6 +101,10 @@
     background-color: $cinza-escuro;
     height: 8rem;
 
+    #btn-mobile {
+        display: none;
+    }
+
 
     nav {
         display: flex;
@@ -679,11 +683,114 @@ button {
  }
  
  /*Mobile*/
- @media (min-width: 425px) {
- }
- 
+ @media only screen and (max-width: 425px) {
+    
+
  /*Menu*/
  
+    #menu {
+        display: flex;
+        justify-content: flex-end;
+        height: 70px;
+        top: 10%;
+        width: 100vw;
+        padding: 1rem;
+        margin: 0;
+        right: 0;
+        align-items: center;
+        background: transparent;
+    }
+        #menu-li {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5%;
+        position: absolute;
+        padding: 0 5%;
+        top: 70px;
+        right: 0px;
+        background: #161616;
+        transition: 0.6s;
+        z-index: 1000;
+        height: 100%;
+        visibility: hidden;
+        overflow-y: hidden;
+        }
+        #menu.active #menu-li {
+        height: 100vh;
+        visibility: visible;
+        overflow-y: auto;
+        }
+        #menu-li a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+        
+        }
+
+        button#btn-mobile {
+            justify-content: center;
+            
+        
+        }
+        #btn-mobile {
+        display: flex;
+        padding: 2rem 1rem 0.5;
+        margin: 0;
+        font-size: 1.5rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        }
+        #hamburger {
+        border-top: 5px solid;
+        width: 32px;
+        }
+        #hamburger::after,
+        #hamburger::before {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 5px;
+        background: currentColor;
+        margin-top: 3px;
+        transition: 0.3s;
+        position: relative;
+
+        }
+        #menu.active #hamburger {
+        border-top-color: transparent;
+        
+        }
+        #menu.active #hamburger::before {
+        transform: rotate(135deg);
+        }
+        #menu.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+        }
+
+    .img-beneficios {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .utensilios img {
+        width: 60vw;
+    }
+
+    .banner {
+        background-image: none;
+        width: 100%;
+        height: 100%;
+
+    }
+
  /*Titulo*/
  
  /*Sessão sobre*/
@@ -699,4 +806,4 @@ button {
   /*Contato*/
  
  /*Footer*/
- 
+ }
