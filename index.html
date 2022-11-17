@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
 
     <!-- Folha de estilo de CSS Linkado -->
     <link rel="stylesheet" href="css/main.css">
@@ -26,24 +26,21 @@
     <!-- Sessão de Menu  -->
         <section class="menu">
             <header>
-                <img src="assets/img/pace-logo.svg">
-            </header>
-            <nav>
+                <img id="logo" src="assets/img/pace-logo.svg">
+            <nav id="nav">
                 <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
-					<span id="hamburger"></span>
-				</button>
-                <ul class="menu__list" id="menu-li" role="menu">
+                    <span id="hamburger"></span>
+                </button>
+                <ul id="menu__list" id="menu-li" role="menu">
                     <li class="menu__list__item"><a href="#sobremim">sobre mim</a></li>
                     <li class="menu__list__item"><a href="#skills">skills</a></li>
                     <li class="menu__list__item"><a href="#formacao">formações e cursos</a></li>
                     <li class="menu__list__item"><a href="#xp">experiência</a></li>
-                    
+                    <li class="menu__list__item" id="menu__list__item__contato"><a href="https://web.whatsapp.com/send?phone=5513996916330" target="_blank">whatsapp</a></li>
                 </ul>
             </nav>
-            <div>
-                <li class="menu__list__item__contato"><a href="https://web.whatsapp.com/send?phone=5513996916330" target="_blank">whatsapp</a></li>
-            </div>
-        </section>
+        </header>
+    </section>
 
 <!-- Sessão de Header/Title/Hero -->
     <section class="title">
@@ -316,6 +313,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- Validate form -->
 <script src="./validate.js"></script>
 
+<script src="./hamb.js"> </script>
 </body>
 </html>
 
