@@ -716,7 +716,7 @@ utilize como referência os breakpoints @media abaixo*/
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 2rem;
+    margin: 1rem 2rem 1rem 2rem;
   }
   section.experience .experience__title {
     font-size: 1.5rem;
