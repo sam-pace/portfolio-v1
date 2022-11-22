@@ -772,6 +772,7 @@ button {
  /*Sessão sobre*/
 
   section.about .about__title {
+    margin: 2rem;
     font-size: 1.5rem;
   }
  
@@ -800,6 +801,7 @@ button {
 
  section.skills .sub__titulo--skills {
     font-size: 1.5rem;
+    margin: 2rem;
  }
 
  section.skills .skills__box {
@@ -831,8 +833,7 @@ button {
  
 
  section.academic .sub__titulo--formacao {
-    display: flex;
-    justify-content: center;
+    margin: 2rem;
     text-align: center;
     font-size: 1.5rem;
  }
@@ -898,6 +899,7 @@ button {
 
  section.experience .sub__titulo--xp {
     font-size: 1.5rem;
+    margin: 2rem;
     width: 100%;
     
  }
@@ -913,8 +915,6 @@ button {
     justify-content: center;
     flex-wrap: wrap;
     margin: 1rem 2rem 1rem 2rem;
-
-    
 
  }
 
@@ -944,6 +944,34 @@ button {
     justify-content: flex-start;
  }
   /*Contato*/
+  section.formcontato {
+    
+  }
+
+  section.formcontato .sub__titulo {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0;
+    margin-left: 7.5rem;
+  }
+
+  section.formcontato .formcontato__subtext {
+    font-size: 1rem;
+  } 
+
+  section.formcontato .formcontato__text {
+    margin: 2rem;
+    width: 100%;
+  }
+
+  section.formcontato .imgcontato {
+    display: none;
+  }
+
+  section.formcontato .formcontato__textarea {
+    width: 90%;
+  }
+
  
  /*Footer*/
  }

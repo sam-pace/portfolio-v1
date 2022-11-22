@@ -607,6 +607,7 @@ utilize como referência os breakpoints @media abaixo*/
   }
   /*Sessão sobre*/
   section.about .about__title {
+    margin: 2rem;
     font-size: 1.5rem;
   }
   section.about .innovation {
@@ -629,6 +630,7 @@ utilize como referência os breakpoints @media abaixo*/
   }
   section.skills .sub__titulo--skills {
     font-size: 1.5rem;
+    margin: 2rem;
   }
   section.skills .skills__box {
     width: 64px;
@@ -651,8 +653,7 @@ utilize como referência os breakpoints @media abaixo*/
     margin: 0;
   }
   section.academic .sub__titulo--formacao {
-    display: flex;
-    justify-content: center;
+    margin: 2rem;
     text-align: center;
     font-size: 1.5rem;
   }
@@ -705,6 +706,7 @@ utilize como referência os breakpoints @media abaixo*/
   }
   section.experience .sub__titulo--xp {
     font-size: 1.5rem;
+    margin: 2rem;
     width: 100%;
   }
   section.experience .experience__img {
@@ -739,5 +741,24 @@ utilize como referência os breakpoints @media abaixo*/
     justify-content: flex-start;
   }
   /*Contato*/
+  section.formcontato .sub__titulo {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0;
+    margin-left: 7.5rem;
+  }
+  section.formcontato .formcontato__subtext {
+    font-size: 1rem;
+  }
+  section.formcontato .formcontato__text {
+    margin: 2rem;
+    width: 100%;
+  }
+  section.formcontato .imgcontato {
+    display: none;
+  }
+  section.formcontato .formcontato__textarea {
+    width: 90%;
+  }
   /*Footer*/
 }/*# sourceMappingURL=main.css.map */
