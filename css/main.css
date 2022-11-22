@@ -710,7 +710,7 @@ utilize como referência os breakpoints @media abaixo*/
   section.experience .experience__img {
     display: flex;
     height: 150px;
-    width: 300px;
+    width: 100%;
   }
   section.experience .experience__box {
     display: flex;
@@ -736,6 +736,7 @@ utilize como referência os breakpoints @media abaixo*/
   section.experience .experience__info {
     width: 100%;
     margin-bottom: 1rem;
+    justify-content: flex-start;
   }
   /*Contato*/
   /*Footer*/
