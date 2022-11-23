@@ -95,6 +95,7 @@ section.menu .menu__list__item {
 }
 section.menu li:hover {
   background-color: #D2DEF6;
+  transition: ease-in-out 300ms;
   padding: 10px;
   border-style: none;
   box-shadow: 0px 0px 0px 0px inset;
@@ -103,10 +104,6 @@ section.menu li:hover {
 /*Sessão Title*/
 section.title {
   background-color: #4B4B4B;
-  color: #D2DEF6;
-  padding: 0 auto;
-  font-size: 3.28rem;
-  font-weight: 800;
 }
 section.title .title__div {
   display: flex;
@@ -165,12 +162,18 @@ section.title .container p span.cursor.typing {
     background-color: #D2DEF6;
   }
 }
+section.title p {
+  color: #D2DEF6;
+  padding: 0 auto;
+  font-size: 3.28rem;
+  font-weight: 800;
+}
 section.title .profile__img img {
   display: flex;
   width: 105%;
 }
 section.title ul {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   padding-left: 0;
   display: flex;
   justify-content: space-between;
@@ -182,10 +185,55 @@ section.title .title__network__item button {
   border: solid #9FB9F3 1px;
   background: none;
 }
+section.title .title__network__item svg {
+  position: relative;
+  margin-right: 0.5rem;
+  top: 3px;
+}
+section.title .title__network__item a {
+  font-size: 1rem;
+}
 section.title .title__network__item button:hover {
   transition: ease-in-out 300ms;
   background-color: #D2DEF6;
   color: #4B4B4B;
+}
+section.title .dropbtn {
+  padding: 10px;
+  border: solid #9FB9F3 1px;
+  background: none;
+}
+section.title .dropbtn svg {
+  color: #9FB9F3;
+  position: relative;
+  margin-right: 0.5rem;
+  top: 3px;
+}
+section.title .dropdown {
+  float: left;
+  overflow: hidden;
+}
+section.title .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 90px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+section.title .dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+section.title .dropdown-content a:hover {
+  background-color: #ddd;
+}
+section.title .show {
+  display: block;
 }
 
 /*Sessão About*/
@@ -541,14 +589,18 @@ utilize como referência os breakpoints @media abaixo*/
     justify-content: center;
   }
   section.menu #menu__list {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     display: flex;
-    height: 50px;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 15px;
+    padding: 10px;
     margin: 0;
-    gap: 0;
+  }
+  section.menu #menu__list a {
+    border: solid #9FB9F3 1px;
+    background: none;
+    padding: 5px;
   }
   section.menu #menu__list li:first-child {
     display: none;
@@ -595,7 +647,6 @@ utilize como referência os breakpoints @media abaixo*/
   }
   /*Sessão sobre*/
   section.about .about__title {
-    margin: 2rem;
     font-size: 1.5rem;
   }
   section.about .innovation {
@@ -630,6 +681,15 @@ utilize como referência os breakpoints @media abaixo*/
     width: 64px;
     height: 64px;
     margin: 0 0.5rem 2rem 0.5rem;
+  }
+  section.skills .skills__box:first-child {
+    margin: 0 1rem 1rem 0;
+  }
+  section.skills .skills__box:nth-child(2) {
+    margin: 0 1rem 1rem 0;
+  }
+  section.skills .skills__box:nth-child(3) {
+    margin: 0 0 1rem 0;
   }
   section.skills .skills__box img {
     width: 30px;
