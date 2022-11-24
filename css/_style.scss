@@ -214,7 +214,7 @@ html {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        width: 90%;
+        width: 100%;
         
     }
 
@@ -241,10 +241,12 @@ html {
     }
 
     .dropbtn {
-        
+        font-size: 1rem;
+        color: $cor-de-link;
         padding: 10px;
         border: solid $cor-de-link 1px;
         background: none;
+        cursor: pointer;
     }
 
     .dropbtn svg {
@@ -257,20 +259,21 @@ html {
     .dropdown {
         float: left;
         overflow: hidden;
+        
       }
 
       .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #f9f9f9;
-        min-width: 90px;
+        background-color: $cinza-escuro;
+        min-width: 10px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
       }
       
       .dropdown-content a {
         float: none;
-        color: black;
+        color: $cor-de-link;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
@@ -855,6 +858,10 @@ button {
     font-size: 1.5rem;
   }
 
+  section.title .container p {
+    font-size: 1.5rem;
+  }
+
   section.title .profile__img img {
     display: none;
   }
@@ -867,6 +874,7 @@ button {
     width: 100%;
     margin: 0 2rem 0 2rem;
   }
+
   section.title .title__subsection {
     font-size: 1rem;
     width: 100%;
@@ -876,11 +884,11 @@ button {
   section.title ul{
     font-size: 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     justify-content: space-between;
     margin: 2rem 2rem 2rem 0;
-
   }
 
   section.title .title__network__item button {
@@ -891,6 +899,10 @@ button {
   section.title .title__network__item svg {
     display: none;
 
+  }
+
+  section.title i {
+    display: none;
   }
 
  /*Sessão sobre*/
