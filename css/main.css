@@ -88,7 +88,7 @@ section.menu a {
 section.menu #logo {
   height: 40px;
   position: relative;
-  top: 10px;
+  top: 1px;
   margin-left: 8rem;
 }
 section.menu #menu__list {
@@ -110,6 +110,7 @@ section.menu li:hover {
 /*Sessão Title*/
 section.title {
   background-color: #4B4B4B;
+  height: 90vh;
   display: flex;
   justify-content: center;
 }
@@ -227,7 +228,7 @@ section.title ul {
   width: 100%;
 }
 section.title .title__network__item button {
-  padding: 10px;
+  padding: 5px;
   border: solid #9FB9F3 1px;
   background: none;
   width: 130px;
@@ -722,10 +723,6 @@ utilize como referência os breakpoints @media abaixo*/
     display: none;
   }
   /*Sessão sobre*/
-  section.about {
-    background-image: url(../assets/img/profile-m.png);
-    background-repeat: no-repeat;
-  }
   section.about .about__title {
     font-size: 1.5rem;
   }

@@ -129,7 +129,7 @@ html {
     #logo {
         height: 40px;
         position: relative;
-        top: 10px;
+        top: 1px;
         margin-left: 8rem;
     }
 
@@ -162,7 +162,7 @@ html {
  
  section.title {
     background-color: #4B4B4B;
-
+    height: 90vh;
     display: flex;
     justify-content: center;
 
@@ -247,7 +247,7 @@ html {
     }
 
     .title__network__item button {
-        padding: 10px;
+        padding: 5px;
         border: solid $cor-de-link 1px;
         background: none;
         width: 130px;
@@ -890,8 +890,7 @@ button {
  /*Sessão sobre*/
 
  section.about {
-    background-image: url(../assets/img/profile-m.png);
-    background-repeat: no-repeat;
+
  }
  section.about .about__title {
     font-size: 1.5rem;
