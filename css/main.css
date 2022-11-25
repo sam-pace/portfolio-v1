@@ -1,6 +1,8 @@
 @charset "UTF-8";
 html {
   scroll-behavior: smooth;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
 }
 
 body {
@@ -8,6 +10,8 @@ body {
   background-color: #293A67;
   margin: 0;
   transition: all 300ms ease-in-out;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
 }
 body #title__bio {
   color: #D2DEF6;
@@ -51,19 +55,21 @@ ol, ul, li {
   list-style: none;
 }
 
-/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
-de utiliza-la. 
-
-Mas o que é o BEM?
-
-BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
-web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
-Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
-de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
-
-Link da documentação oficial!
-https://en.bem.info/methodology/quick-start/*/
 /*Sessão Menu*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 100;
+  border: none;
+  outline: none;
+  background-color: #5E86E2;
+  color: #4B4B4B;
+  cursor: pointer;
+  padding: 15px;
+}
+
 section.menu header {
   box-sizing: border-box;
   display: flex;
@@ -71,9 +77,9 @@ section.menu header {
   padding: 1rem;
   align-items: center;
   background-color: #4B4B4B;
-}
-section.menu #btn-mobile {
-  visibility: hidden;
+  width: 100%;
+  z-index: 99;
+  box-shadow: 0px 2px 5px rgb(52, 52, 52);
 }
 section.menu a {
   display: block;
@@ -104,6 +110,8 @@ section.menu li:hover {
 /*Sessão Title*/
 section.title {
   background-color: #4B4B4B;
+  display: flex;
+  justify-content: center;
 }
 section.title .title__div {
   display: flex;
@@ -168,9 +176,47 @@ section.title p {
   font-size: 3.28rem;
   font-weight: 800;
 }
+@-webkit-keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+section.title .profile__img {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  border-radius: 105%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
+  -webkit-animation: float 6s ease-in-out infinite;
+          animation: float 6s ease-in-out infinite;
+}
 section.title .profile__img img {
-  display: flex;
-  width: 105%;
+  width: 100%;
+  height: auto;
 }
 section.title ul {
   font-size: 1.5rem;
@@ -184,6 +230,7 @@ section.title .title__network__item button {
   padding: 10px;
   border: solid #9FB9F3 1px;
   background: none;
+  width: 130px;
 }
 section.title .title__network__item svg {
   position: relative;
@@ -233,7 +280,7 @@ section.title .dropdown-content a {
   text-align: left;
 }
 section.title .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #5E86E2;
 }
 section.title .show {
   display: block;
@@ -262,8 +309,8 @@ section.about .about__paragraph {
   align-items: flex-end;
   color: #4B4B4B;
   flex-direction: column;
-  font-weight: 300;
   text-align: justify;
+  margin: 0.5rem 0 0.5rem 0;
 }
 section.about .innovation img {
   display: flex;
@@ -272,11 +319,15 @@ section.about .innovation img {
   padding: 0;
   margin-right: 8rem;
 }
+section.about .profile__img-m {
+  display: none;
+}
 
 /* skills*/
 section.skills {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: #4B4B4B;
   margin: 0;
 }
@@ -323,6 +374,7 @@ section.academic {
   display: flex;
   flex-direction: column;
   background-color: #D2DEF6;
+  justify-content: center;
   margin: 0;
 }
 section.academic .sub__titulo--formacao {
@@ -363,6 +415,11 @@ section.academic .academic__courses__list p {
 }
 
 /* experiência*/
+section.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 section.experience .sub__titulo--xp {
   display: flex;
   align-items: flex-start;
@@ -372,6 +429,7 @@ section.experience .sub__titulo--xp {
 section.experience .experience__box {
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
   flex-wrap: wrap;
   margin: 4rem 8rem 4rem 8rem;
   justify-content: space-around;
@@ -434,6 +492,7 @@ section.formcontato {
   display: flex;
   justify-content: center;
   background-color: #D2DEF6;
+  height: calc(100vh - 35%);
   margin: 0;
 }
 section.formcontato .formcontato__text {
@@ -595,7 +654,7 @@ utilize como referência os breakpoints @media abaixo*/
     font-size: 0.7rem;
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 15px;
     padding: 10px;
     margin: 0;
@@ -603,15 +662,18 @@ utilize como referência os breakpoints @media abaixo*/
   section.menu #menu__list a {
     border: solid #9FB9F3 1px;
     background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 100px;
     padding: 5px;
-  }
-  section.menu #menu__list li:first-child {
-    display: none;
   }
   /*Titulo*/
   section.title {
     display: flex;
     justify-content: center;
+    height: 70vh;
   }
   section.title .container {
     display: flex;
@@ -638,24 +700,32 @@ utilize como referência os breakpoints @media abaixo*/
   section.title ul {
     font-size: 1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
     align-items: center;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     margin: 2rem 2rem 2rem 0;
   }
   section.title .title__network__item button {
     border: solid #9FB9F3 1px;
     background: none;
+    width: 120px;
+    height: 30px;
     padding: 5px;
   }
   section.title .title__network__item svg {
-    display: none;
+    top: 2px;
   }
   section.title i {
     display: none;
   }
   /*Sessão sobre*/
+  section.about {
+    background-image: url(../assets/img/profile-m.png);
+    background-repeat: no-repeat;
+  }
   section.about .about__title {
     font-size: 1.5rem;
   }
